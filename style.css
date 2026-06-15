@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #10131a;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.panel {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 28px;
+  background: white;
+  color: #263238;
+  border-radius: 28px;
+}
+
+textarea {
+  width: 100%;
+  height: 260px;
+  padding: 18px;
+  font-size: 17px;
+  border-radius: 18px;
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  padding: 12px 20px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-btn {
+  margin-top: 18px;
+  background: #7e57c2;
+  color: white;
+}
+
+.player-page {
+  display: none;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 12px;
+}
+
+.topbar {
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.top-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#homeBtn {
+  background: #455a64;
+  color: white;
+}
+
+#autoBtn {
+  background: #00c853;
+  color: white;
+}
+
+#fullscreenBtn {
+  background: #7e57c2;
+  color: white;
+}
+
+.video-frame {
+  width: 100%;
+  height: calc(100vh - 185px);
+  background: black;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+#youtubePlayer,
+#youtubePlayer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-wrap {
+  height: 12px;
+  margin-top: 12px;
+  background: #2b3140;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #7e57c2, #42a5f5);
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 6px;
+  color: #cfd8dc;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#prevBtn {
+  background: #eee;
+}
+
+#openBtn {
+  background: #ff5252;
+  color: white;
+}
+
+#nextBtn {
+  background: #42a5f5;
+  color: white;
+}
+
+button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.shortcut {
+  margin-top: 10px;
+  text-align: center;
+  color: #cfd8dc;
+  font-size: 15px;
+}
+
+.finish {
+  padding: 120px 20px;
+  text-align: center;
+  font-size: 48px;
+}
+
+.finish button {
+  margin: 8px;
+}
+
+/* 링크 입력 */
+
+.input-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#clearLinksBtn {
+  background: #eeeeee;
+  color: #263238;
+}
+
+/* 재생목록 저장 */
+
+.playlist-box {
+  margin-top: 22px;
+  padding: 18px;
+  background: #fff8e1;
+  border-radius: 20px;
+  border: 2px solid #ffe082;
+}
+
+.playlist-box h3 {
+  margin-top: 0;
+  color: #6d4c00;
+}
+
+.playlist-save-row,
+.playlist-load-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+#playlistName,
+#playlistSelect {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#savePlaylistBtn {
+  background: #ffb300;
+  color: white;
+}
+
+#loadPlaylistBtn {
+  background: #42a5f5;
+  color: white;
+}
+
+#deletePlaylistBtn {
+  background: #ff5252;
+  color: white;
+}
+
+/* QR */
+
+.qr-box {
+  margin-top: 22px;
+  padding: 18px;
+  background: #f5f3ff;
+  border-radius: 20px;
+  border: 2px solid #d8ccff;
+}
+
+.qr-box h3 {
+  margin-top: 0;
+  color: #4a2c91;
+}
+
+.qr-upload-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.qr-box input[type="file"] {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 0 14px;
+  color: #263238;
+}
+
+.qr-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+#scanBtn {
+  background: #42a5f5;
+  color: white;
+}
+
+#stopScanBtn {
+  background: #ff5252;
+  color: white;
+}
+
+#copyAllBtn {
+  background: #7e57c2;
+  color: white;
+}
+
+#cameraBtn {
+  background: #26a69a;
+  color: white;
+}
+
+.qr-status {
+  margin: 10px 0;
+  color: #263238;
+  font-weight: 700;
+}
+
+.qr-results {
+  margin-top: 10px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  color: #263238;
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.link-text {
+  flex: 1;
+  word-break: break-all;
+  font-size: 14px;
+}
+
+.link-item button {
+  font-size: 14px;
+  padding: 8px 12px;
+  background: #eeeeee;
+  color: #263238;
+}
+
+.success {
+  border-left: 6px solid #00c853;
+}
+
+.error {
+  border-left: 6px solid #c62828;
+}
+
+.error-text {
+  color: #c62828;
+}
+
+#allLinks {
+  height: 120px;
+  margin-top: 12px;
+  font-size: 14px;
+}
